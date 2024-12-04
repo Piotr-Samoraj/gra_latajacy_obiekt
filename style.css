@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+canvas {
+    background-color: #ffffff;
+    border: 10px solid black;
+}
+
+#restart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#restart-btn:hover {
+    background-color: #45a049;
+}
+
+/* Styl dla sekcji instrukcji */
+.instructions {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.instructions h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.instructions .highlight {
+    font-weight: bold;
+    color: #ff5733;
+}
