@@ -98,8 +98,15 @@ function rysujPrzeszkode() {
         let obstacle = przeszkody[i];
         obstacle.y += speed;
 
+        // Rysowanie przeszkody
         context.drawImage(obstacle.img, obstacle.x, obstacle.y, obstacle.size, obstacle.size);
 
+        // Dodanie cienkiego obrysu (border) wokół przeszkody
+        context.strokeStyle = "red";  // Kolor obrysu
+        context.lineWidth = 2;  // Grubość obrysu
+        context.strokeRect(obstacle.x, obstacle.y, obstacle.size, obstacle.size);  // Rysowanie obrysu wokół przeszkody
+
+        // Sprawdzenie kolizji z graczem
         if (
             player.x < obstacle.x + obstacle.size &&
             player.x + player.size > obstacle.x &&
@@ -109,12 +116,14 @@ function rysujPrzeszkode() {
             gameOver = true;
         }
 
+        // Usuwanie przeszkody, jeśli opuściła ekran
         if (obstacle.y > canvas.height) {
             przeszkody.splice(i, 1);
             i--;
         }
     }
 }
+
 
 function gameOverTlo() {
     const img = new Image();
