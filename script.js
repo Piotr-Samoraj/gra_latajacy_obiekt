@@ -8,7 +8,7 @@ let najlepszyWynik = 0;
 
 const obrazPrzeszkody = [
     'img/obs1.jpg',
-    'img/obs2.jpg',
+    'img/obs2.png',
     'img/obs4.jpg',
     'img/obs5.jpg',
     'img/obs6.png',
