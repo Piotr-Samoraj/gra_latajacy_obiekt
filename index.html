@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <div class="instructions">
+ 
+    <div class="instructions" id="instructions">
         <h1>Witaj w naszej grze!</h1>
         <p><span class="highlight">Poruszaj się</span> za pomocą strzałek na klawiaturze.</p>
         <p><span class="highlight">Unikaj przeszkód</span>, które spadają z góry ekranu.</p>
@@ -15,7 +16,16 @@
         <p><span class="highlight">Powodzenia!</span></p>
     </div>
 
+
+    <div id="info">
+        <span id="czas">Czas: 0s</span>
+        <span id="najlepszyWynik">Najlepszy wynik: 0s</span>
+    </div>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <button id="restart-btn" onclick="restartGry()">Restart</button>
+
     <script src="script.js"></script>
+
     <footer><h3>Autorzy: Mikołaj Krukowski | Piotr Samoraj 4TB</h3></footer>
 </body>
 </html>
